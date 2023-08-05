@@ -1,6 +1,6 @@
 # front-end-study
 
-![banner]("./image/banner.png")
+![banner](image/banner.png)
 
 [![TypeScript](https://img.shields.io/badge/-TypeScript-2b6dbf?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vuejs](https://img.shields.io/badge/-Vue.js-4D5573?style=flat&logo=vuedotjs&logoColor=4fc08d)](https://cn.vuejs.org/)
