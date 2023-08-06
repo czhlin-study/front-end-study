@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 const pathDir = (dir: string) => resolve(process.cwd(), dir);
 export default defineUserConfig({
   // 站点配置
+  base: "/front-end-study/",
   lang: "zh-CN",
   title: "Front End Study",
   description: "一个前端知识积累文档仓库，分享带来快乐，知识需要积累。",
