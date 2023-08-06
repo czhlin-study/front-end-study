@@ -9,6 +9,7 @@
 [![Sass](https://img.shields.io/badge/SASS-hotpink.svg?style=flat&logo=SASS&logoColor=white)](https://sass-lang.com/)
 
 一个前端知识积累文档仓库，分享带来快乐，知识需要积累。
+[预览地址](https://czhlin-study.github.io/front-end-study/)
 
 ## 目录
 
