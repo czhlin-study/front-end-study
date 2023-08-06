@@ -34,6 +34,7 @@ jobs:
           version: 8
       - name: Setup Page Dependencies
         run: |
+          cd front-end-study/front-end-study
           pnpm install
           pnpm build
       - name: Checkout
