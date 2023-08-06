@@ -29,6 +29,7 @@ export default defineUserConfig({
     lastUpdatedText: "最近更新",
     contributorsText: "贡献者",
     editLinkText: "编辑此页",
+    editLinkPattern: ":repo/edit/:branch/src/docs/:path",
     sidebar: appConfig.sidebar,
     repo: "czhlin-study/front-end-study",
     repoLabel: "源码地址",
