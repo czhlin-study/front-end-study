@@ -29,16 +29,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - name: Setup Page Dependencies
-        run: |
-          cd front-end-study/front-end-study
-          pnpm install
-          pnpm build
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Setup Pnpm
+        uses: pnpm/action-setup@v2main
+        with:
+            version: 8
+      - name: Setup Page Dependencies
+        run: |
+          pnpm install
+          pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
