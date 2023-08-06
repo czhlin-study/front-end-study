@@ -31,8 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pnpm
-        uses: pnpm/action-setup@v2main
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
         with:
             version: 8
       - name: Setup Page Dependencies
