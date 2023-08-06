@@ -7,19 +7,23 @@
   },
   "scripts": {
     "start": "pnpm dev",
-    "dev": "vuepress dev src",
+    "dev": "vuepress dev src/docs",
     "clean": "rimraf node_modules",
-    "build": "vuepress build src",
+    "build": "vuepress build src/docs",
     "preinstall": "npx only-allow pnpm"
   },
   "keywords": [],
   "author": "czhlin",
   "license": "MIT",
   "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vuepress/bundler-vite": "2.0.0-beta.66",
     "@vuepress/client": "2.0.0-beta.66",
+    "@vuepress/plugin-register-components": "2.0.0-beta.66",
     "@vuepress/theme-default": "2.0.0-beta.66",
     "rimraf": "^5.0.1",
+    "sass": "^1.64.2",
+    "typescript": "^5.1.6",
     "vue": "^3.3.4",
     "vuepress": "2.0.0-beta.66"
   }

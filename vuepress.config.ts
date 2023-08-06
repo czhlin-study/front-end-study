@@ -1,8 +1,9 @@
 import { defineUserConfig } from "vuepress";
 import { defaultTheme } from "@vuepress/theme-default";
-import { viteBundler } from "@vuepress/bundler-vite";
-import { resolve } from "node:path";
-const pathDir = (dir: string) => resolve(process.cwd(), dir);
+import viteConfig from "./vite.config";
+import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+import { pathDir } from "./build";
+import appConfig from "./app.config";
 export default defineUserConfig({
   // 站点配置
   base: "/front-end-study/",
@@ -13,6 +14,9 @@ export default defineUserConfig({
   temp: pathDir(".vuepress/.temp"),
   dest: pathDir("dist"),
   public: pathDir("public"),
+  alias: {
+    "@": pathDir("src"),
+  },
   // 主题和它的配置
   //https://v2.vuepress.vuejs.org/zh/reference/default-theme/config.html
   theme: defaultTheme({
@@ -21,26 +25,24 @@ export default defineUserConfig({
     logoDark: "https://avatars.githubusercontent.com/u/141436083?s=96&v=4",
     colorMode: "auto",
     colorModeSwitch: true,
-    navbar: [
-      {
-        text: "hello",
-        link: "/hello/",
-      },
-    ],
-    sidebar: {
-      "/": [
-        {
-          text: "教程",
-          children: ["/hello/readme.md", "/getting-started.md"],
-        },
-      ],
-    },
+    navbar: appConfig.navbar,
+    lastUpdatedText: "最近更新",
+    contributorsText: "贡献者",
+    editLinkText: "编辑此页",
+    sidebar: appConfig.sidebar,
     repo: "czhlin-study/front-end-study",
     repoLabel: "源码地址",
   }),
   // 使用vite作为打包工具
-  bundler: viteBundler({
-    viteOptions: {},
-    vuePluginOptions: {},
-  }),
+  bundler: viteConfig,
+  plugins: [
+    registerComponentsPlugin({
+      componentsDir: pathDir("src/components"),
+      componentsPatterns: ["**/*.vue"],
+      getComponentName: (filename) => {
+        const execArr = /(\w+)(\/index)?(\.vue)$/.exec(filename);
+        return execArr?.[1] || "";
+      },
+    }),
+  ],
 });

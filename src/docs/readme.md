@@ -4,8 +4,13 @@ title: hello world!
 description: 第一个页面
 ---
 
+<script setup>
+    import Home from  "@/views/Home"
+</script>
+
 # hello world
 
+<Home/>
 ## 学习新思想争做新青年
 
 ```js{1,6-8}
