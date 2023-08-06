@@ -29,9 +29,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Setup Page Dependencies
         run: |
-          npm install pnpm -g
           pnpm install
           pnpm build
       - name: Checkout
