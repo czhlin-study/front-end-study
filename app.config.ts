@@ -6,6 +6,10 @@ export default {
       text: "hello",
       link: "/hello/",
     },
+    {
+      text: "如何开发",
+      link: "/contributing.md",
+    },
   ],
   sidebar: {
     //配置侧边栏
@@ -13,7 +17,7 @@ export default {
     "/hello/": [
       {
         text: "教程",
-        children: ["/hello/readme.md", "/getting-started.md"],
+        children: ["/hello/readme.md"],
       },
     ],
   },

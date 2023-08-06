@@ -51,7 +51,7 @@ pnpm build
 
 ## 如何贡献
 
-查看[贡献规范文档](contributing.md)!
+查看[贡献规范文档](./src/docs/contributing.md)!
 
 小提示: 如果修改`README`文件, 请遵循 [标准`README`规范](https://github.com/RichardLitt/standard-readme)。
 

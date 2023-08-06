@@ -42,7 +42,7 @@ git commit -m "fix: 修复代码问题"
 
 ### 头部
 
-```js
+```md
 ---
 lang: zh-CN //语言：中文
 title: hello world!//标题
