@@ -26,12 +26,20 @@ export default defineUserConfig({
         text: "hello",
         link: "/hello/",
       },
+      {
+        text: "JS 基础",
+        link: "/JS/",
+      },
     ],
     sidebar: {
       "/": [
         {
           text: "教程",
-          children: ["/hello/readme.md", "/getting-started.md"],
+          children: [
+            "/hello/readme.md",
+            "/getting-started.md",
+            "/JS/readme.md",
+          ],
         },
       ],
     },
