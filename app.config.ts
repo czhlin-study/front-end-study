@@ -9,6 +9,8 @@ export default {
     {
       text: "如何开发",
       link: "/contributing.md",
+      // 该元素将一直处于激活状态
+      activeMatch: "^/contributing",
     },
   ],
   sidebar: {
