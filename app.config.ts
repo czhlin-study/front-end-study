@@ -7,6 +7,10 @@ export default {
       link: "/hello/",
     },
     {
+      text: "unKnow",
+      link: "/unKnow/",
+    },
+    {
       text: "如何开发",
       link: "/contributing.md",
       // 该元素将一直处于激活状态
@@ -20,6 +24,12 @@ export default {
       {
         text: "教程",
         children: ["/hello/readme.md"],
+      },
+    ],
+    "/unKnow/": [
+      {
+        text: "test",
+        children: ["/unKnow/readme.md"],
       },
     ],
   },
